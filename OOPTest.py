@@ -24,3 +24,18 @@ introduct_player(nico)
 
 nico = create_player("Nico", 1500, "Team X")
 '''
+# class review
+
+class Puppy:
+    def __init__(self):  # self == 그들 자신 참조
+        self.name = "Ruffus"
+        self.age = 0.1
+        self.breed = "Beagle"
+        
+ruffus = Puppy() # ruffus == self
+
+print(
+    ruffus.name,
+    ruffus.age,
+    ruffus.breed
+)
