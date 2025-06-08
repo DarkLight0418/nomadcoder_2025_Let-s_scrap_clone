@@ -27,15 +27,16 @@ nico = create_player("Nico", 1500, "Team X")
 # class review
 
 class Puppy:
-    def __init__(self):  # self == 그들 자신 참조
-        self.name = "Ruffus"
+    def __init__(self, name, breed):  # self == 그들 자신 참조
+        self.name = name
         self.age = 0.1
-        self.breed = "Beagle"
+        self.breed = breed
+    def __str__(self):  # __자동 호출 메서드__
+        return f"{self.breed} puppy named {self.name}"
         
-ruffus = Puppy() # ruffus == self
+ruffus = Puppy(
+    name="ruffus",
+    breed="Beagle") # ruffus == self
+bibi = Puppy("bibi", "Dalmatian")
 
-print(
-    ruffus.name,
-    ruffus.age,
-    ruffus.breed
-)
+print(bibi, ruffus)
