@@ -26,17 +26,20 @@ nico = create_player("Nico", 1500, "Team X")
 '''
 # class review
 
-class Puppy:
-    def __init__(self, name, breed):  # self == 그들 자신 참조
+class Dog:
+    def __init__(self, name, breed, age):
         self.name = name
-        self.age = 0.1
         self.breed = breed
-    def __str__(self):  # __자동 호출 메서드__
-        return f"{self.breed} puppy named {self.name}"
-        
-ruffus = Puppy(
-    name="ruffus",
-    breed="Beagle") # ruffus == self
-bibi = Puppy("bibi", "Dalmatian")
+        self.age = age
 
-print(bibi, ruffus)
+class GuardDog(Dog):
+        
+    def rrrrr(self):
+        print("stay away!!")
+class Puppy(Dog):
+    
+    def woof_woof(self):
+        print("Woof Woof!")
+
+if __name__ == "__main__":
+    print("")
