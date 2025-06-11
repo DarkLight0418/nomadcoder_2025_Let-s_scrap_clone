@@ -31,15 +31,42 @@ class Dog:
         self.name = name
         self.breed = breed
         self.age = age
+        
+    def sleep(self):
+        print("zzzzzzz.......")
 
 class GuardDog(Dog):
+    def __init__(self, name, breed):
+        super().__init__(name, breed, 5)
         
     def rrrrr(self):
         print("stay away!!")
+        
 class Puppy(Dog):
+    def __init__(self, name, breed):
+        super().__init__( # super() 부모 클래스 참조
+            name, 
+            breed, 
+            0.1,
+    )
+        self.spoiled = True
     
     def woof_woof(self):
         print("Woof Woof!")
 
 if __name__ == "__main__":
     print("")
+    
+    ruffus = Puppy(
+        name="Ruffus",
+        breed="Beagle",
+    )
+    
+    bibi = GuardDog(
+        name="Bibi",
+        breed="Dalmatian",
+    )
+    
+    ruffus.woof_woof()
+    
+    bibi.sleep()
