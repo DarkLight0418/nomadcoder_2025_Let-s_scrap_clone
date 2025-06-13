@@ -34,6 +34,10 @@ class Dog:
         
     def sleep(self):
         print("zzzzzzz.......")
+    
+    def yummy(self):
+        print("yumyumyummm.... it's delicious")
+
 
 class GuardDog(Dog):
     def __init__(self, name, breed):
